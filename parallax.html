@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Parallax</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header>
+    <h2 class="image"></h2>
+    <nav class="navigation">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Service</a>
+    <a href="#">contact</a>
+<div class="container">
+    <h1>Mountain Star company</h1>
+    <p>"Embark on an unforgettable journey with us! AtMountain Star company, we turn your travel dreams into reality by offering expertly crafted tours to breathtaking destinations. Whether you seek adventure, relaxation, or cultural exploration, we’ve got the perfect trip for you.</p>
+    <a href="#">Learn more</a>
+  </div>
+  
+  <div class="blank"><img src="https://th.bing.com/th/id/OIP.l-zWEMgFva_m5I0UGop2iwHaEK?rs=1&pid=ImgDetMain" alt="the back of random person">
+    <img src="https://th.bing.com/th/id/OIP.hroeUvYC2qajfOdcJ-g2NgHaE9?rs=1&pid=ImgDetMain" alt="an eagle" style="--f:.12;--r:5px">
+    <img src="https://th.bing.com/th/id/OIP.W01Z3gvIImekRB0VoTjNzQHaE6?rs=1&pid=ImgDetMain" alt="a cup of something to drink, probably some tea" style="--f:.08;--r:20px">
+    <img src="https://picsum.photos/id/669/300/300" alt="the back of random person">
+    <img src="https://assets.codepen.io/1480814/pexels-pixabay-62655.jpg" alt="an eagle" style="--f:.12;--r:5px"></div>
+  
+  <div class="container second">
+    <div class="item">
+      <div class="img img-first"></div>
+      <div class="card">
+        <h3>Rock climbing</h3>
+        <p>The goal is to reach the summit of a formation or the endpoint of a usually pre-defined route without falling</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img img-second"></div>
+      <div class="card">
+        <h3>Caving</h3>
+        <p>Exploring underground through networks of tunnels and passageways, which can be natural or artificial.</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img img-third"></div>
+      <div class="card">
+        <h3>Parachuting</h3>
+        <p>Jumping from an aeroplane and falling through the air before opening your parachute.</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="blank">
+    <img src="https://th.bing.com/th/id/OIP.SfHuG-570wmtJc7WI9WNUAHaE8?rs=1&pid=ImgDetMain" alt="the back of random person">
+<img src="https://th.bing.com/th/id/OIP.kKFbV5JnIRg7vlTMnyS7FwHaE8?rs=1&pid=ImgDetMain" alt="an eagle" style="--f:.12;--r:5px">
+<img src="https://th.bing.com/th/id/R.05f32c9edc73660265fb418f7ea33a2b?rik=bW3H7wcf9pGP3Q&riu=http%3a%2f%2frishikesh.net%2fwp-content%2fuploads%2f2020%2f05%2fbigstock-Hiking-In-Mountains-Men-Hike-308240887.jpg&ehk=W2DZFYfxmPsGbrWiKrZtZ8Mj2EA9bfzrcZhIvMLpmko%3d&risl=1&pid=ImgRaw&r=0" alt="a cup of something to drink, probably some tea" style="--f:.08;--r:20px">
+<img src="https://thumbs.dreamstime.com/b/summer-hike-boy-mountains-54188964.jpg" alt="the back of random person">
+<img src="https://th.bing.com/th/id/OIP.pRdlupRvuzzbSG6GDK3ehwHaFp?rs=1&pid=ImgDetMain" alt="an eagle" style="--f:.12;--r:5px">
+  </div>
+  <section class="last"></section>
+  
+<script>
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.scrollY;
+        document.getElementById('parallax-img').style.transform = `translateY(${scrollPosition * 0.5}px)`;
+    });
+    document.addEventListener("mousemove", function (event) {
+            let x = (window.innerWidth / 2 - event.clientX) / 25;
+            let y = (window.innerHeight / 2 - event.clientY) / 25;
+
+            document.querySelectorAll(".parallax-layer").forEach(layer => {
+                let speed = layer.getAttribute("data-speed");
+                layer.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+</script>
+</body>
+</html>
